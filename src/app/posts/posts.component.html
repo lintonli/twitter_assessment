@@ -1,0 +1,13 @@
+<!-- <p>posts works!</p> -->
+<div class="posts" *ngIf="posts.length > 0">
+  <h3>Posts</h3>
+  <ul>
+    <li *ngFor="let post of posts">
+       <p>{{ post.body }}</p>
+     <button (click)="toggleComments(post.id)">
+        {{ selectedPostId === post.id ? 'Hide Comments' : 'Show Comments' }}
+      </button>
+       <app-comments *ngIf="selectedPostId === post.id" [postId]="post.id"></app-comments>
+    </li>
+  </ul>
+</div>

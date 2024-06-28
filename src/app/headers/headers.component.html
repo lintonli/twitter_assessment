@@ -1,0 +1,29 @@
+<!-- <p>headers works!</p> -->
+ <form class="container" [formGroup]="form">
+<div class="nav">
+    <h2>Twitter Clone</h2>
+    <div class="search">
+        <label> Search</label>
+        <select formControlName="username">
+            <option value="">Select a user</option>
+            <option *ngFor="let user of users"[value]="user.id">{{user.username}}</option>
+        </select>
+    </div>
+</div>
+<div class="img">
+    <img src="https://cdn.pixabay.com/photo/2016/05/27/08/51/mobile-phone-1419275_960_720.jpg" alt="">
+</div>
+  <!-- <h1>ggghghghgh</h1> -->
+<p><img src="https://cdn.pixabay.com/photo/2016/11/22/21/42/woman-1850703_640.jpg"/></p>
+<div *ngIf="selecteduser">
+
+ 
+    <p>{{selecteduser.username}}</p>
+    <p>{{selecteduser.email}}</p>
+    <p>{{selecteduser.website}}</p>
+  
+</div>
+
+ </form>
+ <app-posts *ngIf="selecteduser"[userId]="selecteduser.id"></app-posts>
+

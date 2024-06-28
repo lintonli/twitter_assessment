@@ -1,0 +1,23 @@
+.container{
+    padding: 0%;
+    width: 100vw;
+}
+.nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: blue;
+    color: white;
+}
+.search{
+    gap:20px
+}
+.img img{
+    
+    width: 100%;
+}
+p img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+}
