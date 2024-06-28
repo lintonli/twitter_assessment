@@ -18,7 +18,7 @@ ngOnInit(): void {
   if (this.postId) {
     this.commentService
       .getCommentbyPostId(this.postId).subscribe((comments:IComment[])=>{
-        this.comments=this.comments;
+        this.comments=comments;
     })
       
   }
